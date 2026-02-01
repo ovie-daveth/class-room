@@ -1,15 +1,10 @@
--- Insert sample instructor user (using a standard UUID for demo)
-INSERT INTO users (id, email, full_name, role) 
-VALUES ('22222222-2222-2222-2222-222222222222', 'instructor@example.com', 'John Instructor', 'instructor')
-ON CONFLICT DO NOTHING;
-
 -- Insert sample courses
 INSERT INTO courses (title, description, programming_language, instructor_id, status, level, created_at) 
 VALUES 
-  ('Introduction to Python', 'Learn the fundamentals of Python programming, from variables and data types to functions and modules.', 'Python', '22222222-2222-2222-2222-222222222222', 'published', 'beginner', NOW()),
-  ('JavaScript Essentials', 'Master JavaScript basics including ES6 syntax, async programming, and DOM manipulation.', 'JavaScript', '22222222-2222-2222-2222-222222222222', 'published', 'beginner', NOW()),
-  ('HTML & CSS Fundamentals', 'Build responsive web pages with semantic HTML5 and modern CSS3 techniques.', 'HTML', '22222222-2222-2222-2222-222222222222', 'published', 'beginner', NOW()),
-  ('CSS Advanced Layouts', 'Master advanced CSS concepts including Flexbox, Grid, and animations.', 'CSS', '22222222-2222-2222-2222-222222222222', 'published', 'intermediate', NOW());
+  ('Introduction to Python', 'Learn the fundamentals of Python programming, from variables and data types to functions and modules.', 'Python', NULL, 'published', 'beginner', NOW()),
+  ('JavaScript Essentials', 'Master JavaScript basics including ES6 syntax, async programming, and DOM manipulation.', 'JavaScript', NULL, 'published', 'beginner', NOW()),
+  ('HTML & CSS Fundamentals', 'Build responsive web pages with semantic HTML5 and modern CSS3 techniques.', 'HTML', NULL, 'published', 'beginner', NOW()),
+  ('CSS Advanced Layouts', 'Master advanced CSS concepts including Flexbox, Grid, and animations.', 'CSS', NULL, 'published', 'intermediate', NOW());
 
 -- Insert sample lessons for Python course
 INSERT INTO lessons (course_id, title, content, order_index, is_published, created_at) 
